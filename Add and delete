@@ -1,0 +1,75 @@
+
+#1 Put data in front
+
+def push(self,new_data):
+  new_node = Node(new_data) #allocate the new node and assigne the data
+  new_node.next = self.head #Make next of new Node as head
+  self.next = new_node #move the head to point the new data
+
+
+#2. Put data in middle
+
+def push(self, previous_node, new_data):
+  new_node = Node(new_data)
+  new_node.next = previous_node.next
+  previous_node.next = new_node
+
+
+#3. Put Data in the end
+
+def append(self, new_data):
+ 
+        # 1. Create a new node
+        # 2. Put in the data
+        # 3. Set next as None
+        new_node = Node(new_data)
+ 
+        # 4. If the Linked List is empty, then make the
+        #    new node as head
+        if self.head is None:
+            self.head = new_node
+            return
+ 
+        # 5. Else traverse till the last node
+        last = self.head
+        while (last.next):
+            last = last.next
+ 
+        # 6. Change the next of last node
+        last.next = new_node
+
+
+#deleting a node
+
+#Given a reference to the head of a list and a key, delete the first occurrence of key in linked list
+def delete_node(self, key):     
+
+  temp = self.head   #store the head
+
+  if tem is not None:     # If head node itself holds the key to be deleted
+    if (temp.data == key):
+      self.head = temp.next
+      temp = None
+      return
+  # Search for the key to be deleted, keep track of the previous node as we need to change 'prev.next'
+
+  while (temp is not None):
+    if temp.data == key:
+      break
+    prev = temp
+    temp = temp.next
+
+  if(temp == none):   # if key was not present in linked list
+    return
+  
+  prev.next = temp.next   # Unlink the node from linked list
+  temp = None
+
+
+    def printList(self):    # function to print the linked LinkedList
+        temp = self.head
+        while(temp):
+            print (" %d" %(temp.data)),
+            temp = temp.next
+
+
